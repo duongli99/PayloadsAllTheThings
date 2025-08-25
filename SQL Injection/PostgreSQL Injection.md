@@ -145,7 +145,7 @@ select case when substring(column,1,1)='1' then pg_sleep(5) else pg_sleep(0) end
 select case when substring(column,1,1)='1' then pg_sleep(5) else pg_sleep(0) end from table_name where column_name='value' limit 1
 select case when A=(select SUBSTR(key,stt,1) from A where B=1 limit 1) then CAST((SELECT version()) AS INT) else 1 end
 1 and (select case when 1=2 then CAST((SELECT version()) AS INT) else '1' end is NOT NULL)
-1 and (select case when (select length(key) from A where B=1 limit 1)=$$65$$ then CAST((SELECT version()) AS INT) else '1' end is NOT NULL).
+1 and (select case when (select length(key) from A where B=1 limit 1)=123 then CAST((SELECT version()) AS INT) else '1' end is NOT NULL).
 ```
 
 ```sql
